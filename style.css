@@ -9,12 +9,8 @@
     --font-color: #f1f5f9;
     --primary-color: #4dff91;
     --secund-color: #ff0043;
+    --hover-color: #3ee77f;
 }
-#themeSwitcher {
-    background-color: var(--bg-color);
-    border: .125rem solid var(--font-color);
-    color: var(--font-color);
-  }
 body{
     background-color: var(--background);
 }
@@ -39,13 +35,30 @@ img{
     display: block;
     width: 100%;
 }
-.fundo img{
-    width: 100%;
+.theme {
+    font-size: 1.5em;
+    color: var(--font-color);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 50px;
     position: relative;
+    top: 35px;
+    z-index: 1;
+    transition: .30s;
+}
+#btn{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
 }
 .bloco{
+    background-image: url(./fundo.png);
+    background-repeat: no-repeat;
     width: 100%;
-    height: 25%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -54,7 +67,7 @@ img{
     justify-content: center;
 }
 .texto{
-    color: var(--font-color);
+    color: #f1f5f9;
     font-size: 1em;
     font-family: 'Montserrat';
     text-align: center;
@@ -65,9 +78,10 @@ img{
 .content{
     width: 100%;
     text-align: justify;
-    padding: 150px 0;
+    padding: 800px 0 0 0;
 }
 .titulo{
+    color: var(--bg-color);
     text-align: center;
     margin-bottom: 50px;
     font-size: 2em;
@@ -77,6 +91,7 @@ img{
 .content p{
     font-size: 1em;
     font-family: 'Montserrat';
+    color: var(--bg-color);
 }
 .midias{
     width: 100%;
@@ -101,7 +116,7 @@ img{
 .skils-content img{
     width: 100%;
     display: block;
-    max-width: 180px;
+    max-width: 200px;
     margin-bottom: 50px;
     padding: 0px 15px;
     transition: .30s;
@@ -132,6 +147,7 @@ img{
     font-size: 1.975em;
     font-family: 'Montserrat';
     font-weight: 200;
+    color: var(--bg-color);
 }
 .itens h3:last-child{
     margin-top: 0px;
@@ -171,6 +187,9 @@ img{
     font-family: 'Montserrat';
     text-decoration: none;
 }
+.descricao a:hover{
+    background-color: var(--hover-color);
+}
 .footer{
     width: 100%;
     display: inline-flex;
@@ -199,6 +218,7 @@ img{
     color: var(--bg-color);
 }
 .texto-final h3{
+    color: var(--bg-color);
     text-align: center;
     margin-bottom: 30px;
     margin-top: 150px;
@@ -213,11 +233,20 @@ img{
     .texto{
         font-size: 1.5em;
     }
+    .content{
+        padding: 400px 0 0 0;
+    }
+    .theme{
+        font-size: 2em;
+    }
 }
 @media screen and (min-width: 1220px){   /* Desktop */
     .fundo img{
         width: 100%;
         position: relative;
+    }
+    .theme{
+        font-size: 2em;
     }
     .bloco{
         width: 100%;
@@ -228,6 +257,9 @@ img{
     }
     .titulo{
         font-size: 3.6em;
+    }
+    .content{
+        padding: 900px 0 0 0;
     }
     .content p{
         font-size: 1.25em;
