@@ -11,6 +11,9 @@
     --secund-color: #ff0043;
     --hover-color: #3ee77f;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--background);
 }
@@ -225,6 +228,21 @@ img{
     font-size: 1.975em;
     font-family: 'Montserrat';
     font-weight: 200;
+}
+.btn-topo{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+}
+.btn-top a{
+    color: var(--bg-color);
+}
+.btn-top a:hover{
+    color: var(--primary-color);
+}
+.btn-topo.visible {
+    visibility: visible;
 }
 @media screen and (min-width: 768px){  /* Tablet */
     .bloco{
